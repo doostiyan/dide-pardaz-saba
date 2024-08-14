@@ -4,7 +4,6 @@
 
 ![Screenshot 2024-08-14 214845](https://github.com/user-attachments/assets/14a5d08b-664c-45bf-8b1b-8150afa1d866)
 
-![Screenshot 2024-08-14 214845](https://github.com/user-attachments/assets/c32152b2-a1cd-4b7c-b77f-2686d08b7324)
 
 ![Screenshot 2024-08-14 214909](https://github.com/user-attachments/assets/711ab3f2-942c-433c-ad3a-9c1071cfad53)
 
