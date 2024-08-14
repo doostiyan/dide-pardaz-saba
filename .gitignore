@@ -1,0 +1,10 @@
+.idea
+venv
+db.sqlite3
+__pycache__
+list.html
+
+q1.html
+
+filter_model.html
+/view_all.py

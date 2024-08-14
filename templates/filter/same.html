@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}
+لیست تمام موبایلهایی که ملیت برند با کشور سازندهی آن برابر است
+{% endblock %}
+{% block content %}
+        <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+<body>
+    <br>
+    <h1 class="text-center">گوشی‌هایی با ملیت یکسان</h1>
+        <br>
+    <br>
+<table class="rtl">
+        <thead>
+            <tr>
+                <th>کشور سازنده</th>
+                <th>وضعیت</th>
+                <th>سایز صفحه نمایش</th>
+                <th>رنگ</th>
+                <th>قیمت</th>
+                <th>مدل گوشی</th>
+                <th>نام ملیت</th>
+                <th>نام برند</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for phone in mobiles %}
+            <tr>
+                <td>{{ phone.manufacture_country }}</td>
+                <td>{{ phone.status }}</td>
+                <td>{{ phone.screen_size }}</td>
+                <td>{{ phone.color }}</td>
+                <td>{{ phone.price }}</td>
+                <td>{{ phone.model }}</td>
+                <td>{{ phone.brand.nationality }}</td>
+                <td>{{ phone.brand.name }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7">هیچ گوشی‌ای موجود نیست.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        <br>
+    <br>
+    <a class="btn btn-secondary" href="{% url 'mobile_list' %}">برگشت به لیست گوشی‌ها</a>
+{% endblock %}

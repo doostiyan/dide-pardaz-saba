@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <title>افزودن گوشی</title>
+    <br>
+
+    <h1>افزودن گوشی جدید</h1>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ذخیره</button>
+    </form>
+{% endblock %}

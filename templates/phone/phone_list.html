@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <title>لیست گوشی‌ها</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+<body><br>
+    <a  class="btn btn-success" href="{% url 'korean_brands' %}"><h2>برندهای کره‌ای</h2></a>
+   <a class="btn btn-primary" href="{% url 'mobiles_matching' %}"><h2>موبایل‌هایی با ملیت و کشور سازنده یکسان</h2></a>
+<br>
+<br>
+<br>
+    <h2 >جستجوی موبایل بر اساس برند</h2>
+    <form method="get">
+        <input type="text" name="brand_name" placeholder="نام برند">
+        <button type="submit">جستجو</button>
+    </form>
+<br>
+<br>
+<br>
+    <table class="rtl">
+        <thead>
+            <tr>
+                <th>کشور سازنده</th>
+                <th>وضعیت</th>
+                <th>سایز صفحه نمایش</th>
+                <th>رنگ</th>
+                <th>قیمت</th>
+                <th>مدل گوشی</th>
+                <th>نام ملیت</th>
+                <th>نام برند</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for phone in mobiles %}
+            <tr>
+                <td>{{ phone.manufacture_country }}</td>
+                <td>{{ phone.status }}</td>
+                <td>{{ phone.screen_size }}</td>
+                <td>{{ phone.color }}</td>
+                <td>{{ phone.price }}</td>
+                <td>{{ phone.model }}</td>
+                <td>{{ phone.brand.nationality }}</td>
+                <td>{{ phone.brand.name }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7">هیچ گوشی‌ای موجود نیست.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
