@@ -5,7 +5,7 @@
 
 1.  Clone the repository:
 ```bash  
- git clone https://github.com/hoseinkoshkian/project_for_dide_pardaz_saba.git
+ git clone https://github.com/doostiyan/dide-pardaz-saba
 ```
 
 2. Create a virtual environment
