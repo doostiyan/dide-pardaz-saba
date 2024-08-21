@@ -38,7 +38,7 @@
   ```bash  
  python manage.py runserver`
 ```
-
+## The project pages are as follows
 
 ![Screenshot 2024-08-14 214827](https://github.com/user-attachments/assets/efd42ded-23c9-4e93-b901-afeff1ce7753)
 
