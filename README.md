@@ -1,4 +1,44 @@
-پروژه فروشگاه موبایل با فیلتر های مربوطه به صورت جنگو و جنگو رست نوشته شده است نمونه صفحات به صورت زیر می باشند:
+## Mobile Inventory Management  with Django & DRF
+
+
+### Installation and commissioning
+
+1.  Clone the repository:
+```bash  
+ git clone https://github.com/hoseinkoshkian/project_for_dide_pardaz_saba.git
+```
+
+2. Create a virtual environment
+  ```bash  
+   python -m venv venv
+```
+
+3. Activate the virtual environment
+	- on Windows:
+		 ```bash  
+		 venv\Scripts\activate
+		```
+	 - on Linux or Mac:
+		  ```bash  
+		   source venv/bin/activate
+		```
+ 4. Install the required packages:
+  ```bash  
+ pip install -r requirements.txt
+```
+ 5. Run database migrations:
+  ```bash  
+  python manage.py migrate
+```
+ 6. Create a superuser:
+  ```bash  
+ python manage.py createsuperuser
+```
+ 7. Run the development server:
+  ```bash  
+ python manage.py runserver`
+```
+
 
 ![Screenshot 2024-08-14 214827](https://github.com/user-attachments/assets/efd42ded-23c9-4e93-b901-afeff1ce7753)
 
